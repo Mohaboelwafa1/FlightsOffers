@@ -14,6 +14,12 @@
 		4C37024F2930044300291D81 /* FlightOffersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C37024E2930044300291D81 /* FlightOffersTests.swift */; };
 		4C3702592930044300291D81 /* FlightOffersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3702582930044300291D81 /* FlightOffersUITests.swift */; };
 		4C37025B2930044300291D81 /* FlightOffersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C37025A2930044300291D81 /* FlightOffersUITestsLaunchTests.swift */; };
+		4C93E56B29338DAB009A95CD /* OffersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93E56A29338DAB009A95CD /* OffersModel.swift */; };
+		4C93E56D29338DC9009A95CD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93E56C29338DC9009A95CD /* DataService.swift */; };
+		4C93E57129338E75009A95CD /* OffersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93E57029338E75009A95CD /* OffersViewModel.swift */; };
+		4C93E5732933D6AA009A95CD /* OfferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93E5722933D6AA009A95CD /* OfferModel.swift */; };
+		4C93E5752933D6CF009A95CD /* OfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93E5742933D6CF009A95CD /* OfferView.swift */; };
+		4C93E5772933D71C009A95CD /* OffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C93E5762933D71C009A95CD /* OffersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		4C3702542930044300291D81 /* FlightOffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightOffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3702582930044300291D81 /* FlightOffersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightOffersUITests.swift; sourceTree = "<group>"; };
 		4C37025A2930044300291D81 /* FlightOffersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightOffersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C93E56A29338DAB009A95CD /* OffersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersModel.swift; sourceTree = "<group>"; };
+		4C93E56C29338DC9009A95CD /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		4C93E57029338E75009A95CD /* OffersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewModel.swift; sourceTree = "<group>"; };
+		4C93E5722933D6AA009A95CD /* OfferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferModel.swift; sourceTree = "<group>"; };
+		4C93E5742933D6CF009A95CD /* OfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferView.swift; sourceTree = "<group>"; };
+		4C93E5762933D71C009A95CD /* OffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +106,11 @@
 		4C37023C2930044000291D81 /* FlightOffers */ = {
 			isa = PBXGroup;
 			children = (
+				4C93E57B2933D7A7009A95CD /* Network */,
+				4C93E57A2933D77B009A95CD /* ViewModels */,
+				4C93E5792933D776009A95CD /* Models */,
+				4C93E5782933D769009A95CD /* Views */,
 				4C37023D2930044100291D81 /* FlightOffersApp.swift */,
-				4C37023F2930044100291D81 /* ContentView.swift */,
 				4C3702412930044300291D81 /* Assets.xcassets */,
 				4C3702432930044300291D81 /* Preview Content */,
 			);
@@ -125,6 +140,41 @@
 				4C37025A2930044300291D81 /* FlightOffersUITestsLaunchTests.swift */,
 			);
 			path = FlightOffersUITests;
+			sourceTree = "<group>";
+		};
+		4C93E5782933D769009A95CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C93E5762933D71C009A95CD /* OffersView.swift */,
+				4C93E5742933D6CF009A95CD /* OfferView.swift */,
+				4C37023F2930044100291D81 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C93E5792933D776009A95CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C93E56A29338DAB009A95CD /* OffersModel.swift */,
+				4C93E5722933D6AA009A95CD /* OfferModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4C93E57A2933D77B009A95CD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4C93E57029338E75009A95CD /* OffersViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4C93E57B2933D7A7009A95CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4C93E56C29338DC9009A95CD /* DataService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +308,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3702402930044100291D81 /* ContentView.swift in Sources */,
+				4C93E5752933D6CF009A95CD /* OfferView.swift in Sources */,
+				4C93E57129338E75009A95CD /* OffersViewModel.swift in Sources */,
+				4C93E5772933D71C009A95CD /* OffersView.swift in Sources */,
+				4C93E5732933D6AA009A95CD /* OfferModel.swift in Sources */,
+				4C93E56B29338DAB009A95CD /* OffersModel.swift in Sources */,
 				4C37023E2930044100291D81 /* FlightOffersApp.swift in Sources */,
+				4C93E56D29338DC9009A95CD /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

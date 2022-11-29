@@ -1,4 +1,3 @@
-
 import Foundation
 
 enum OffersError: Error {
@@ -14,7 +13,7 @@ class DataService {
         let result = try JSONDecoder().decode(Offers.self, from: data)
         return result
     }
-    
+
     private func prepareRequestURL() -> String {
         let todayDate = getOffersDateRange().current
         let futureDate = getOffersDateRange().future
@@ -30,8 +29,8 @@ class DataService {
         let futureDate = Calendar.current.date(byAdding: monthComponent, to: currentDate)
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
-        formatter.string(from: currentDate) // currentDate
-        formatter.string(from: futureDate!) // futureDate
+        formatter.string(from: currentDate)
+        formatter.string(from: futureDate!)
         return (formatter.string(from: currentDate), formatter.string(from: futureDate!))
     }
 

@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-        var body: some View {
-            NavigationStack {
-                OffersView()
-            }
-            .navigationTitle("Today Offers")
-        }
+    var body: some View {
+        OffersView()
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
