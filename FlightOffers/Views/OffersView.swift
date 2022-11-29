@@ -11,12 +11,12 @@ struct OffersView: View {
 
     @StateObject var viewModel: OffersViewModel =  OffersViewModel()
     @Environment(\.colorScheme) var colorScheme
-    @State var isHideLoader: Bool = false
+    @State var isLoaderHidden: Bool = false
 
     var body: some View {
         VStack {
             if viewModel.offers.isEmpty {
-                LoaderView(tintColor: .gray, scaleSize: 3.0).padding(.bottom,50).hidden(isHideLoader)
+                LoaderView(tintColor: .gray, scaleSize: 3.0).padding(.bottom,50).hidden(isLoaderHidden)
             } else {
                 Text("Pick your offer today")
                     .font(.system(size: 20))
@@ -33,7 +33,7 @@ struct OffersView: View {
                             date: offer.dTime,
                             route: offer.route,
                             flyFrom: offer.cityFrom,
-                            flightDuration: offer.flyDuration,
+                            flightDuration: offer.fly_duration,
                             seats: offer.availability.seats ?? 0)
                         OfferView(model: model)
                     }
@@ -55,7 +55,7 @@ struct OffersView: View {
     }
     
     func setupAppearance() {
-        isHideLoader.toggle()
+        isLoaderHidden.toggle()
         UIPageControl.appearance().currentPageIndicatorTintColor = .black
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
     }

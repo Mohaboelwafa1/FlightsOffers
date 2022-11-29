@@ -2,28 +2,25 @@ import Foundation
 
 struct Offers: Codable {
     let currency: String
-    let data: [Datum]
+    let offersList: [Offer]
+
+    enum CodingKeys: String, CodingKey {
+        case currency = "currency"
+        case offersList = "data"
+    }
 }
 
 // MARK: - Datum
-struct Datum: Codable {
-    let id, flyFrom, flyTo, cityFrom: String
-    let cityCodeFrom, cityTo, cityCodeTo: String
+struct Offer: Codable {
+    let id, flyFrom, flyTo, cityFrom, cityCodeFrom, cityTo, cityCodeTo: String
     let countryFrom, countryTo: Country
     let dTime, dTimeUTC, aTime, aTimeUTC: Int
     let distance: Double
     let duration: Duration
-    let flyDuration: String
+    let fly_duration: String
     let price: Int
     let availability: Availability
     let route: [Route]
-
-    
-    enum CodingKeys: String, CodingKey {
-        case id, flyFrom, flyTo, cityFrom, cityCodeFrom, cityTo, cityCodeTo, countryFrom, countryTo, dTime, dTimeUTC, aTime, aTimeUTC, distance, duration
-        case flyDuration = "fly_duration"
-        case price, availability, route
-    }
 }
 
 // MARK: - Availability
@@ -50,9 +47,4 @@ struct Duration: Codable {
 // MARK: - Route
 struct Route: Codable {
     let cityCodeFrom: String
-}
-
-// MARK: - Seats
-struct Seats: Codable {
-    let passengers, adults, children, infants: Int
 }
